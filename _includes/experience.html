@@ -1,0 +1,14 @@
+<div class="experience">
+  {% for experience in site.data.experience %}
+  <div class="h3 mt-5">{{ experience.company }}</div>
+  <div class="lead">
+    {{ experience.role }} ({{ experience.start_date }} - {{ experience.end_date
+    }})
+  </div>
+  <ul class="mt-2">
+    {% for description in experience.description %}
+    <li>{{ description }}</li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</div>
